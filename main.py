@@ -7,8 +7,11 @@ def main():
     parser.add_argument("--input" , required=True)
     parser.add_argument("--output" , required=True)
     args = parser.parse_args()
-
+    
     image = cv2.imread(args.input)
-    gray = cv2.cvtColor(image, cv2.color_bgr2gray)
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY )
     cv2.imwrite(args.output , gray)
     print("تصویر خاکستری ذخیره شد")
+main()
+
+
